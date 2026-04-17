@@ -1,0 +1,16 @@
+# Day 1 - Linux User & Permission Management
+
+## Objective
+Understand how Linux manages users, groups, and file permissions.
+
+---
+
+## Tasks Performed
+
+### 1. Created Users
+- devuser
+- opsuser
+
+Command used:
+sudo adduser devuser
+
