@@ -30,7 +30,7 @@ sudo groupadd developers
 - opsuser → operations
 
 command used:
-sudo usermod -aG devops developers
+sudo usermod -aG developers devops
 ---
 
 ### 4. Created Shared Directory
@@ -48,11 +48,24 @@ chown devuser:developers /opt/project-data
 ---
 
 ### 6. Set Permissions
-
 chmod 770 /opt/project-data
 
 
 ---
+## System Inspection
+
+### List users
+cut -d: -f1 /etc/passwd
+
+### List groups
+cut -d: -f1 /etc/group
+
+### Check user groups
+id devuser
+
+### Check group members
+getent group developers
+----
 
 ## Testing
 
