@@ -4,7 +4,7 @@
 
 echo "<html>"
 echo "	<head>"
-echo "		<tilte>Page Title</title>"
+echo "		<title>Page Title</title>"
 echo "	</head>"
 echo "	<body>"
 echo "		page body."
