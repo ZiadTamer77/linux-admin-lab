@@ -4,9 +4,9 @@
 
 echo "	<html>
 	<head>
-		<title>Page Title</title>
+		<title>System Information Report</title>
 	</head>
 	<body>
-		page body.
+		<h1>System Information Report</h1>
 	</body>
 </html>"
