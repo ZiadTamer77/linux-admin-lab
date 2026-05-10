@@ -2,11 +2,11 @@
 
 # Program to output system information
 
-echo "<html>"
-echo "	<head>"
-echo "		<title>Page Title</title>"
-echo "	</head>"
-echo "	<body>"
-echo "		page body."
-echo "	</body>"
-echo "</html>"
+echo "	<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+		page body.
+	</body>
+</html>"
