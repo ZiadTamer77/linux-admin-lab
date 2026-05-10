@@ -1,0 +1,15 @@
+FILE=/etc/group
+
+read -r -p "Enter The Group Name > " group_name
+
+file_info="$( grep "^$group_name:" $FILE)"
+
+if [ -n "$file_info" ]; then
+	IFS=":" read -r group pw gid users <<< "$file_info"
+	echo "GROUP:	'$group'"
+	echo "GID:	'$gid'"
+	echo "USERS:	'$users'"
+else
+	echo" Group not Found "$group_name" ">&2
+	exit 1
+fi
