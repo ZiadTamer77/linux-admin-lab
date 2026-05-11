@@ -1,0 +1,46 @@
+#!/bin/bash
+
+invalid_input () {
+
+	echo " This input is invalid > \" $REPLY \" ">&2
+	exit 1
+}
+
+read -r -p "Please Enter A Valid Input "
+
+#If input is empty
+[[ -z $REPLY ]] && invalid_input
+
+#Input had multiple words
+(( "$( echo "$REPLY" | wc -w )" > 1 )) && invalid_input
+
+if [[ "$REPLY" =~ ^[-[:alnum:]\._]+$ ]]; then
+	echo " \"$REPLY\" is a valid file name. "
+	if [[ -e $REPLY ]]; then
+		echo " \"$REPLY\" Exits "
+	else
+		echo " But, file \"$REPLY\" doesn't exist "
+	fi
+
+
+	if [[ "$REPLY" =~ ^-?[[:digit:]]*\.[[:digit:]]+$ ]]; then
+		echo " \"$REPLY\" is a floating point digit "
+	
+	else
+		
+		echo " \"$REPLY\" is not a floating point digit "
+	fi
+
+
+	if [[ "$REPLY" =~ ^-?[[:digit:]]+$ ]]; then 
+		echo " \"$REPLY\" is an Integer "
+	else
+
+		echo " \"$REPLY\" is not an Integer "
+	fi
+
+else
+	
+	echo " \"$REPLY\" is not a valid file name. "
+fi
+
